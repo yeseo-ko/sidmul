@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin:0;padding:0;}
+        body{line-height:1;}
+        #wrap{height:5000px;
+        padding-top:2000px
+    }
+    </style>
+    <script src="1105.js"></script>
+</head>
+<body>
+    
+        <!-- ddd -->
+        <h1>슬라이드 효과 연습</h1>
+        <span id=slideUpBtn><img src="/image/main.png" alt="main"></span>
+        <div id=divBox style="display: none;"><img src="/image/main_2.png" alt=""></div>
+
+        <script>
+            $("#slideUpBtn").click(function() {
+                $("#divBox").slideDown(300);
+            });
+        </script>
+
+        <div id="wrap"><h1>위치매서드</h1></div>
+        <script>
+            $(function(){
+                var topNum=$("h1").offset().top;
+                $(window).scrollTop(topNum);
+
+                var sct=$(window).scrollTop();
+                console.log(sct);
+            });
+        </script>
+
+        
+
+</body>
+</html>
